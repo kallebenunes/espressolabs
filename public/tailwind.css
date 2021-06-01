@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Sofia Pro';
+        src: url('../assets/fonts/sofia-pro-extralight-az.otf');
+        font-weight: 200;
+    }
+    @font-face {
+        font-family: 'Sofia Pro';
+        src: url('../assets/fonts/sofia-pro-light-az.otf');
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: 'Sofia Pro';
+        src: url('../assets/fonts/sofia-pro-regular-az.otf');
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: 'Sofia Pro';
+        src: url('../assets/fonts/sofia-pro-regular-italic-az.otf');
+        font-weight: 400;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Sofia Pro';
+        src: url('../assets/fonts/sofia-pro-medium-az.otf');
+        font-weight: 500;
+    }
+    @font-face {
+        font-family: 'Sofia Pro';
+        src: url('../assets/fonts/sofia-pro-medium-italic-az.otf');
+        font-weight: 500;
+        font-style: italic;
+    }
+    
+
+}
+@layer components {
+    .btn {
+        @apply bg-gradient-to-r from-blue-dianne-200 to-blue-dianne-900 text-white py-2 px-6 rounded;
+    }
+
+    .centralize {
+        min-width: 128px;
+        @apply flex self-center px-4;
+    }
+
+    /*Start section benefits*/
+    .card-benefits {
+        @apply flex flex-col justify-items-center items-center;   
+    }
+
+    
+    
+    .card-benefits img {
+        max-width: 250px;
+
+    }
+
+    .card-benefits div {
+        @apply text-white flex flex-col items-center justify-center text-xl;
+    }
+    
+    .card-benefits {
+        @apply text-center my-16;
+    }
+
+    .card-benefits p {
+        @apply font-thin py-4;
+    }
+    .card-benefits h2 {
+        @apply text-2xl;
+    }
+    /*End section benefits*/
+    /*Start section benefits*/
+    .card-services {
+        @apply my-12;
+        
+    }
+    
+    .card-services h2 {
+        @apply text-green-yeloow text-lg py-4;
+    }
+    
+    .card-services p {
+        @apply text-silver-500 max-w-xs;
+    }
+    
+    .card-services img {
+        @apply h-20 w-20;
+    }
+    /*Start section benefits*/
+    
+}
+
+@media (min-width: 1024px) {
+    .card-benefits {
+        @apply grid grid-cols-3 mx-auto py-16 ;
+    }
+
+    .card-benefits div {
+        @apply col-span-2 text-left text-lg;
+    }
+
+    .card-benefits img{
+        @apply col-span-1 max-w-full;
+    }
+
+   
+}
